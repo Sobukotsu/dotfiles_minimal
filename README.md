@@ -8,10 +8,10 @@ up. Every file here works with only what the OS ships by default: POSIX
 `sh`, `bash`, `zsh`, and `vi`/`vim`. No plugin manager, no external prompt
 tool, no third-party tool references at all, no packages to install first.
 
-This is a companion to a fuller personal dotfiles repo (`~/dotfiles`) that
-adds starship, LazyVim, tmux, Alacritty, and Homebrew — this repo is the
-subset of that setup that needs nothing beyond the OS itself, for bootstrapping
-a fresh machine, a container, or a VM before anything else is installed.
+Useful for bootstrapping a fresh machine, a container, or a VM before
+anything else has been installed — a sane shell and editor baseline that
+works immediately, with nothing to fetch and nothing that can fail to
+resolve.
 
 ## Layout
 
@@ -52,10 +52,11 @@ cd ~/dotfiles-minimal
 | `.vimrc` | Editor defaults | Builtin options + the builtin `default` colorscheme only; `mouse`/`clipboard` are feature-guarded with `has()` so it doesn't error on a stripped-down vim build |
 
 Deliberately **not** included, since none of it is present on a stock
-system: Homebrew package list (`Brewfile`), Neovim/LazyVim config, tmux
-config, Alacritty config, or any `claude`/tmux integration helpers. Add
-those from the fuller `~/dotfiles` repo once you've actually installed the
-tools they depend on.
+system: a package manager's manifest (e.g. a Brewfile), editor plugin
+configs, a terminal multiplexer config, a GUI terminal emulator config, or
+any helper that depends on a tool this repo doesn't already assume. Once
+you've installed something beyond the OS defaults, manage its config in a
+separate, dedicated dotfiles setup.
 
 ## Adding a new dotfile
 
