@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+.directory
+.Trash-*
+
+# Windows/WSL
+Thumbs.db
+desktop.ini
+
+# tool-generated backups/swap files
+*.bak
+*~
+*.swp
+*.swo
+
+# machine-local overrides (never commit secrets/local-only config)
+*.local
