@@ -10,6 +10,7 @@ set noswapfile
 set encoding=utf-8
 
 set number
+set relativenumber
 set cursorline
 set showcmd
 set wildmenu
@@ -30,6 +31,20 @@ if has('mouse')
 endif
 if has('clipboard')
   set clipboard=unnamed
+endif
+
+" Syntax highlighting and per-filetype indent/settings.
+if has('syntax')
+  syntax on
+endif
+if has('autocmd')
+  filetype plugin indent on
+endif
+
+" Cycle through :make/:grep results.
+if has('quickfix')
+  nnoremap ]q :cnext<CR>
+  nnoremap [q :cprev<CR>
 endif
 
 silent! colorscheme default

@@ -49,7 +49,7 @@ cd ~/dotfiles-minimal
 | `.bash_profile` | Sources `.profile` + `.bashrc` for login bash | No dependency |
 | `.bashrc` | Interactive bash: aliases, history, prompt | Detects GNU vs BSD `ls` via `uname -s` — `--color=auto` on Linux, `-G` on macOS |
 | `.zshrc` | Interactive zsh: completion, history, aliases, prompt | Uses zsh's own `colors`/`PROMPT` — no starship or other external prompt tool |
-| `.vimrc` | Editor defaults | Builtin options + the builtin `default` colorscheme only; `mouse`/`clipboard` are feature-guarded with `has()` so it doesn't error on a stripped-down vim build |
+| `.vimrc` | Editor defaults, plus syntax highlighting, per-filetype indent, and quickfix navigation for coding | Builtin options + the builtin `default` colorscheme only; `mouse`/`clipboard`/`syntax`/`autocmd`/`quickfix` are all feature-guarded with `has()` so it doesn't error on a stripped-down vim build |
 
 Deliberately **not** included, since none of it is present on a stock
 system: a package manager's manifest (e.g. a Brewfile), editor plugin

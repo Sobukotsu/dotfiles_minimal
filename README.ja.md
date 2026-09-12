@@ -41,7 +41,7 @@ cd ~/dotfiles-minimal
 | `.bash_profile` | ログインbashで `.profile` + `.bashrc` を読み込む | 依存なし |
 | `.bashrc` | 対話的bash: エイリアス、履歴、プロンプト | `uname -s`でGNU/BSDの`ls`を判別 — Linuxなら`--color=auto`、macOSなら`-G` |
 | `.zshrc` | 対話的zsh: 補完、履歴、エイリアス、プロンプト | zsh組み込みの`colors`/`PROMPT`のみ使用 — starshipなど外部プロンプトツール不要 |
-| `.vimrc` | エディタの基本設定 | 組み込みオプションと組み込みの`default`カラースキームのみ使用。`mouse`/`clipboard`は`has()`でガードし、機能を持たない簡易版vimでもエラーにならない |
+| `.vimrc` | エディタの基本設定に加え、構文ハイライト・ファイルタイプ別インデント・quickfix巡回などコーディング向けの設定 | 組み込みオプションと組み込みの`default`カラースキームのみ使用。`mouse`/`clipboard`/`syntax`/`autocmd`/`quickfix`をすべて`has()`でガードし、機能を持たない簡易版vimでもエラーにならない |
 
 あえて含めていないもの（まっさらな環境には存在しない前提のため）: パッケージ
 マネージャのマニフェスト（Brewfileなど）、エディタのプラグイン設定、ターミナル
