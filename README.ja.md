@@ -2,7 +2,7 @@
 
 [English](README.md) | [日本語](README.ja.md)
 
-OSをインストールした直後の、まっさらなLinux/mac環境のための最小構成dotfilesです。Homebrewもパッケージマネージャもエディタのプラグインも、何も入れていない状態で動くことを前提にしています。使っているのはOS標準で最初から入っているものだけ — POSIX `sh`、`bash`、`zsh`、`vi`/`vim` です。プラグインマネージャも外部プロンプトツールも、事前に何かをインストールする必要は一切ありません。
+OSをインストールした直後の、まっさらなLinux/mac環境のための最小構成dotfilesです。パッケージマネージャもエディタのプラグインも、何も入れていない状態で動くことを前提にしています。使っているのはOS標準で最初から入っているものだけ — POSIX `sh`、`bash`、`zsh`、`vi`/`vim` です。プラグインマネージャも外部プロンプトツールも、サードパーティ製ツールへの言及も一切なく、事前に何かをインストールする必要はありません。
 
 これはより機能豊富な個人用dotfilesリポジトリ（`~/dotfiles`）の姉妹版です。あちらはstarship・LazyVim・tmux・Alacritty・Homebrewを前提にしていますが、こちらはOS自体以外何も要らないサブセットだけを切り出したもので、まっさらなマシンやコンテナ、VMを何もインストールしていない状態からブートストラップするためのものです。
 
@@ -37,7 +37,6 @@ cd ~/dotfiles-minimal
 | `.profile` | POSIXログインシェルのPATH/EDITOR設定 | POSIX組み込み機能のみ使用 |
 | `.bash_profile` | ログインbashで `.profile` + `.bashrc` を読み込む | 依存なし |
 | `.bashrc` | 対話的bash: エイリアス、履歴、プロンプト | `uname -s`でGNU/BSDの`ls`を判別 — Linuxなら`--color=auto`、macOSなら`-G` |
-| `.zprofile` | zshログインシェル | Homebrewが実際にインストール済み（既知の3パスをチェック）の場合のみ設定。無ければ何もしない |
 | `.zshrc` | 対話的zsh: 補完、履歴、エイリアス、プロンプト | zsh組み込みの`colors`/`PROMPT`のみ使用 — starshipなど外部プロンプトツール不要 |
 | `.vimrc` | エディタの基本設定 | 組み込みオプションと組み込みの`default`カラースキームのみ使用。`mouse`/`clipboard`は`has()`でガードし、機能を持たない簡易版vimでもエラーにならない |
 

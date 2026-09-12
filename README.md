@@ -3,10 +3,10 @@
 [English](README.md) | [日本語](README.ja.md)
 
 A minimal-environment dotfiles set for a stock Linux or macOS box, right
-after install — before Homebrew, a package manager, or any editor plugin
-has been set up. Every file here works with only what the OS ships by
-default: POSIX `sh`, `bash`, `zsh`, and `vi`/`vim`. No plugin manager, no
-external prompt tool, no packages to install first.
+after install — before a package manager or any editor plugin has been set
+up. Every file here works with only what the OS ships by default: POSIX
+`sh`, `bash`, `zsh`, and `vi`/`vim`. No plugin manager, no external prompt
+tool, no third-party tool references at all, no packages to install first.
 
 This is a companion to a fuller personal dotfiles repo (`~/dotfiles`) that
 adds starship, LazyVim, tmux, Alacritty, and Homebrew — this repo is the
@@ -48,7 +48,6 @@ cd ~/dotfiles-minimal
 | `.profile` | POSIX login shell PATH/EDITOR setup | Pure POSIX builtins |
 | `.bash_profile` | Sources `.profile` + `.bashrc` for login bash | No dependency |
 | `.bashrc` | Interactive bash: aliases, history, prompt | Detects GNU vs BSD `ls` via `uname -s` — `--color=auto` on Linux, `-G` on macOS |
-| `.zprofile` | zsh login shell | Only touches Homebrew if it's already installed (checks 3 known paths); no-op otherwise |
 | `.zshrc` | Interactive zsh: completion, history, aliases, prompt | Uses zsh's own `colors`/`PROMPT` — no starship or other external prompt tool |
 | `.vimrc` | Editor defaults | Builtin options + the builtin `default` colorscheme only; `mouse`/`clipboard` are feature-guarded with `has()` so it doesn't error on a stripped-down vim build |
 
