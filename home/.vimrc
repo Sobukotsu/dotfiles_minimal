@@ -15,6 +15,10 @@ set cursorline
 set showcmd
 set wildmenu
 set laststatus=2
+" Filename, modified/readonly/help/preview flags, filetype, line/col,
+" percentage. Uses only built-in format codes (no %{expr}), so it works
+" without the +eval feature.
+set statusline=%f\ %m%r%h%w\ %y%=%l,%c\ %P
 
 set hlsearch
 set ignorecase
